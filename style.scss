@@ -23,33 +23,38 @@ body {
 }
 
 .key {
-
-  /* & > * {
-      position: absolute;
-  } */
-
+  
+  & > * {
+    position: absolute;
+  } 
+  
   &::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 50%;
-      width: 0.5em; height: 0.5em;
-      transform: translateX(-50%) rotateX(120deg) translateY(0.25em);
-      clip-path: polygon(25% 100%, 75% 100%, 75% 50%, 100% 50%, 50% 0, 0 50%, 25% 50%);
-      transform-origin: top;
-      transition: opacity 0.2s;
-      opacity: 0;
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    width: 0.5em; height: 0.5em;
+    transform: translateX(-50%) rotateX(120deg) translateY(0.25em);
+    clip-path: polygon(25% 100%, 75% 100%, 75% 50%, 100% 50%, 50% 0, 0 50%, 25% 50%);
+    transform-origin: top;
+    transition: opacity 0.2s;
+    opacity: 0;
   }
+}
+
+.selecionada {
+  background-color:#070;
 }
 
 .white {
   position: absolute;
   width: calc(1em - 1px); height: 5em;
-  background-image: linear-gradient(#eee, #fff);
+  background-image: linear-gradient(#eee, rgba(255, 255, 255, 0.411));
   transform-origin: top;
   transition: all 0.2s;
 
   &:hover {
       transform: rotateX(-4.2deg);
+      
 
       &::after {
           opacity: 1;
@@ -142,3 +147,4 @@ body {
 .octave1 { --leftOffset: -10.5em; }
 .octave2 { --leftOffset: -3.5em; }
 .octave3 { --leftOffset:  3.5em; }
+

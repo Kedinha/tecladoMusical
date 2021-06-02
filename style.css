@@ -22,10 +22,8 @@ body {
   cursor: pointer;
 }
 
-.key {
-  /* & > * {
-      position: absolute;
-  } */
+.key > * {
+  position: absolute;
 }
 .key::after {
   content: "";
@@ -41,11 +39,15 @@ body {
   opacity: 0;
 }
 
+.selecionada {
+  background-color: #070;
+}
+
 .white {
   position: absolute;
   width: calc(1em - 1px);
   height: 5em;
-  background-image: linear-gradient(#eee, #fff);
+  background-image: linear-gradient(#eee, rgba(255, 255, 255, 0.411));
   transform-origin: top;
   transition: all 0.2s;
 }
