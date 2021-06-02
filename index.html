@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+  <title>..::Site MegWeb::..</title>
+    <link rel="stylesheet" href="css/style.css">    
+</head>
+<!-- Navegação -->
+<body>
+    <nav class="navigation">
+        <div class="navigation-inner site-container">
+            <img id="logo">
+            <div class="main-navigation">
+                <ul class="main-navigation-ul">
+                    <li><a href="http://">Home</a></li>
+                    <li><a href="http://">Sobre Nós</a></li>
+                    <li><a href="http://">Projetos</a></li>
+                    <li><a href="http://">Contato</a></li>
+                    <li><a href="http://">Mapa</a></li>
+                </ul>
+            </div>
+            <div id="btnBurger" class="burger-container" onclick="menuFn(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <script>
+             function menuFn(x){
+                x.classList.toggle("change");
+            }
+            </script>        
+        </div>
+    </nav>
+<section class="section-top-banner">
+    <div class="top-banner__inner site-container">
+        <div class="top-banner__image">
+            <img src="images/menino.png" alt="">
+        </div>
+        <div class="top-banner__text">
+            <div class="top-banner__text-up">
+                <span class="top-banner__span">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+                <h2 class="top-banner__h2">Lorem</h2>
+            </div>
+        </div>
+        <div class="top-banner__text-down">
+                <h2 class="top-banner__h2">Ipsum</h2>
+                <span class="top-banner__span2">ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit!</span>
+           <p>Frase de impacto legal</p>
+            <a href="http://" class="a-button">Leia mais</a>
+        </div>
+    </div>
+</section>
+
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/main.js"></script>
+<!--     <footer>
+        Rodapé
+    </footer> -->
+</body>
+</html>

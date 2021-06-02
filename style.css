@@ -1,0 +1,187 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+}
+
+body {
+  background-color: #345;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  perspective: 35em;
+}
+
+.keyboard {
+  position: relative;
+  transform: rotateX(60deg);
+  cursor: pointer;
+}
+
+.key {
+  /* & > * {
+      position: absolute;
+  } */
+}
+.key::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  transform: translateX(-50%) rotateX(120deg) translateY(0.25em);
+  clip-path: polygon(25% 100%, 75% 100%, 75% 50%, 100% 50%, 50% 0, 0 50%, 25% 50%);
+  transform-origin: top;
+  transition: opacity 0.2s;
+  opacity: 0;
+}
+
+.white {
+  position: absolute;
+  width: calc(1em - 1px);
+  height: 5em;
+  background-image: linear-gradient(#eee, #fff);
+  transform-origin: top;
+  transition: all 0.2s;
+}
+.white:hover {
+  transform: rotateX(-4.2deg);
+}
+.white:hover::after {
+  opacity: 1;
+  background-color: #fff7;
+}
+.white .front {
+  width: 100%;
+  height: 0.75em;
+  top: 100%;
+  background-color: #eee;
+  background-image: linear-gradient(#fff, #aaa);
+  transform: rotateX(-90deg);
+  transform-origin: top;
+}
+.white .left {
+  width: 0.75em;
+  height: 100%;
+  background-image: linear-gradient(90deg, #888, #444);
+  transform: rotateY(90deg);
+  transform-origin: left;
+}
+.white .right {
+  width: 0.75em;
+  height: 100%;
+  right: 0;
+  background-image: linear-gradient(90deg, #444, #888);
+  transform: rotateY(-90deg);
+  transform-origin: right;
+}
+
+.black {
+  position: absolute;
+  width: calc(0.5em - 1px);
+  height: 3em;
+  background-image: linear-gradient(#333, #111);
+  transform: translateZ(0.25em);
+  transform-origin: top;
+  transition: transform 0.2s;
+}
+.black:hover {
+  transform: translateZ(0.25em) rotateX(-4.2deg);
+}
+.black:hover::after {
+  opacity: 1;
+  background-color: #0007;
+}
+.black .front {
+  width: 100%;
+  height: 1.4em;
+  top: 100%;
+  background-color: #f00;
+  background-image: linear-gradient(#333, #000);
+  transform: rotateX(-45deg);
+  transform-origin: top;
+}
+.black .left {
+  width: 1em;
+  height: calc(100% + 1em);
+  background-image: linear-gradient(90deg, #222, #000);
+  transform: rotateY(90deg);
+  transform-origin: left;
+  clip-path: polygon(0 0, 0 3em, 100% 100%, 100% 0);
+}
+.black .right {
+  width: 1em;
+  height: calc(100% + 1em);
+  right: 0;
+  background-image: linear-gradient(90deg, #000, #222);
+  transform: rotateY(-90deg);
+  transform-origin: right;
+  clip-path: polygon(0 0, 0 100%, 100% 3em, 100% 0);
+}
+
+.C {
+  left: calc(var(--leftOffset) + 0em);
+}
+
+.Db {
+  left: calc(var(--leftOffset) + 0.75em);
+}
+
+.D {
+  left: calc(var(--leftOffset) + 1em);
+}
+
+.Eb {
+  left: calc(var(--leftOffset) + 1.75em);
+}
+
+.E {
+  left: calc(var(--leftOffset) + 2em);
+}
+
+.F {
+  left: calc(var(--leftOffset) + 3em);
+}
+
+.Gb {
+  left: calc(var(--leftOffset) + 3.75em);
+}
+
+.G {
+  left: calc(var(--leftOffset) + 4em);
+}
+
+.Ab {
+  left: calc(var(--leftOffset) + 4.75em);
+}
+
+.A {
+  left: calc(var(--leftOffset) + 5em);
+}
+
+.Bb {
+  left: calc(var(--leftOffset) + 5.75em);
+}
+
+.B {
+  left: calc(var(--leftOffset) + 6em);
+}
+
+.octave1 {
+  --leftOffset: -10.5em;
+}
+
+.octave2 {
+  --leftOffset: -3.5em;
+}
+
+.octave3 {
+  --leftOffset: 3.5em;
+}
+
+/*# sourceMappingURL=style.css.map */
